@@ -5,13 +5,14 @@
 O objetivo deste estudo é aplicar técnicas de detecção de anomalias, especificamente o Isolation Forest e o DBSCAN, a um conjunto de dados de contas financeiras. O propósito é identificar contas de transações que se desviam significativamente do comportamento típico, o que pode indicar atividades fraudulentas ou incomuns.
 
 # Etapas
-Primeiramente, foram feitos os tratamentos e análises exploratórias dos dados para avaliações e saber que tipo de informações iniciais podemos obter. De acordo com as análises exploratórias, os dados apresentavam muitos outliers e alta assimetria, o que pode prejudicar a detecção de anomalias, além de que os dados numéricos estavam em escalas diferentes, tornando necessária a normalização para padronizá-los.
+Primeiramente, realizamos o tratamento e a análise exploratória dos dados para avaliar suas características e obter informações iniciais. Nessa etapa, identificamos a presença de muitos outliers e alta assimetria, fatores que podem influenciar a modelagem dos dados. Além disso, os dados numéricos estavam em escalas diferentes, tornando necessária a normalização para padronizá-los.
 
-Essa combinação de processos reduziu bastante o número de outliers e a assimetria das distribuições, aproximando-as de uma gaussiana (normal).
+Após a normalização, houve uma redução na influência dos outliers e na assimetria das distribuições, aproximando-as de uma distribuição normal.
+Em seguida, aplicamos a redução de dimensionalidade utilizando PCA, com o objetivo de encontrar a menor quantidade de componentes principais possível, preservando a maior parte da variância dos dados. Esse processo ajudou a reduzir ruídos e diminuir os custos computacionais.
 
-Na etapa seguinte, realizamos a redução de dimensionalidade usando PCA com o objetivo de encontrar o menor número de componentes principais possível, preservando o máximo de informação (variância) dos dados. Como resultado, reduzimos ruídos e diminuímos os custos computacionais.
-
-Após reduzirmos a dimensionalidade da base de dados com o método PCA, entramos nos modelos de detecção de anomalias, aplicando o algoritmo DBSCAN e Isolation Forest, dois métodos poderosos para clusterização e detecção de anomalias.  Com base nessas etapas, encontramos o cluster anômalo que apresentam um padrão de comportamento muito diferente dos demais clusters. Algumas características foram:
+Com a base transformada, utilizamos modelos de detecção de anomalias, aplicando os algoritmos DBSCAN e Isolation Forest. O DBSCAN, além de realizar clusterização, identifica pontos classificados como ruído, que podem representar anomalias. Já o Isolation Forest é um modelo específico para a detecção de anomalias, baseado no isolamento dos pontos de dados.
+A partir dessas análises, identificamos padrões anômalos nos dados, representados por clusters ou pontos isolados com comportamento significativamente diferente dos demais.
+Algumas características foram:
 
 * Gastam muito mais (especialmente compras pontuais).
 
