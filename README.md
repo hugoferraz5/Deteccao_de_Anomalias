@@ -1,10 +1,10 @@
 # Detecção de Anomalias
 ![Gráfico 1](https://github.com/user-attachments/assets/7027c856-7de8-406f-9bd7-ad3a22fba493)
 
-# Descrição
+## Descrição
 O objetivo deste estudo é aplicar técnicas de detecção de anomalias, especificamente o Isolation Forest e o DBSCAN, a um conjunto de dados de contas financeiras. O propósito é identificar contas de transações que se desviam significativamente do comportamento típico, o que pode indicar atividades fraudulentas ou incomuns.
 
-# Etapas
+## Etapas
 Primeiramente, realizamos o tratamento e a análise exploratória dos dados para avaliar suas características e obter informações iniciais. Nessa etapa, identificamos a presença de muitos outliers e alta assimetria, fatores que podem influenciar a modelagem dos dados. Além disso, os dados numéricos estavam em escalas diferentes, tornando necessária a normalização para padronizá-los.
 
 Após a normalização, houve uma redução na influência dos outliers e na assimetria das distribuições, aproximando-as de uma distribuição normal.
